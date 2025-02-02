@@ -239,16 +239,71 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     h2{
         text-align: center;
         font-family: var(--font-Montserrat);
     }
     .myExperiences__container{
-        width: 70%;
         display: flex;
-        flex-direction: column;
-        gap: 40px;
+        gap: 20px;
+        justify-content: center;
+        .myExperiences__text-container{
+            display: flex;
+            align-items: end;
+            gap: 100px;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+            &:last-child{
+                flex-direction: row;
+                align-items: center;
+                .myExperiences__text-content{
+                    background-color: #ff9100 !important;
+                }
+            }
+            .myExperiences__text-content{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                background-color: #00a2ff;
+                border-radius: 20px;
+                width: 100%;
+                h3{
+                    padding: 20px 20px 0 20px;
+                    font-family: var(--font-Montserrat);
+                }
+                p{
+                    font-weight: 700;
+                    &:last-child{
+                        font-weight: normal;
+                    }
+                }
+                .myExperiences__text{
+                    padding: 0 20px 20px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    font-family: var(--font-Open-Sans);
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                }
+            }
+            
+        }
+        .baton__container{
+            span{
+                background-color: #1c1c1c;
+                border-radius: 20px;
+                width: 5px;
+                height: 100%;
+                display: block;
+            }
+        }
         .myExperiences__text{
             display: flex;
             flex-direction: column;
@@ -323,7 +378,7 @@ footer{
         transition: all 300ms ease-in-out 0s;
         &:hover{
             background-color: #1c1c1c;
-            color: white;
+            color: #fff;
         }
     }
     #my__skills{
@@ -397,21 +452,28 @@ footer{
         }
     }
     #my__experiences{
-        padding: 20px;
-        margin: auto;
         h2{
             font-size: 44px;
         }
         .myExperiences__container{
-            width: 100%;
-            .myExperiences__text{
-                gap: 15px;
-                h3{
-                    font-size: 30px;
+            .myExperiences__text-container{
+                .myExperiences__text-content{
+                    h3{
+                        font-size: 30px;
+                    }
+                    .myExperiences__text{
+                        gap: 20px;
+                        p{
+                            font-size: 20px;
+                        }
+                        ul{
+                            li{
+                                font-size: 20px;
+                            }
+                        }
+                    }
                 }
-                p{
-                    font-size: 20px;
-                }
+                
             }
         }
     }
@@ -538,15 +600,26 @@ footer{
             font-size: 34px;
         }
         .myExperiences__container{
-            width: 100% !important;
-            .myExperiences__text{
-                gap: 15px;
-                h3{
-                    font-size: 20px;
+            gap: 15px;
+            .myExperiences__text-container{
+                gap: 75px;
+                .myExperiences__text-content{
+                    h3{
+                        font-size: 20px;
+                    }
+                    .myExperiences__text{
+                        gap: 20px;
+                        p{
+                            font-size: 16px;
+                        }
+                        ul{
+                            li{
+                                font-size: 16px;
+                            }
+                        }
+                    }
                 }
-                p{
-                    font-size: 16px;
-                }
+                
             }
         }
     }
@@ -614,7 +687,7 @@ footer{
     #my__skills{
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 20px 15px;
         gap: 40px;
         /* overflow: hidden; */
         .my__skills-title{
@@ -686,22 +759,50 @@ footer{
         }
     }
     #my__experiences{
-        background-color: #fff;
-        padding: 20px;
+        padding: 20px 15px;
+        gap: 15px;
         h2{
-            text-align: center;
-            font-family: var(--font-Montserrat);
+            font-size: 34px;
         }
-    }
-    .myExperiences__container{
-        width: 100% !important;
-        .myExperiences__text{
+        .myExperiences__container{
+            flex-direction: column;
             gap: 15px;
-            h3{
-                font-size: 20px;
+            .myExperiences__text-container{
+                gap: 15px;
+                &:first-child{
+                    .myExperiences__text-content{
+                        &:last-child{
+                            background-color: #ff9100;
+                        }
+                    }
+                }
+                &:last-child{
+                    .myExperiences__text-content{
+                        background-color: #00a2ff !important;
+                    }
+                }
+                .myExperiences__text-content{
+                    h3{
+                        font-size: 20px;
+                        padding: 15px 15px 0 15px;
+                    }
+                    .myExperiences__text{   
+                        gap: 15px;
+                        padding: 0 15px 15px 15px;
+                        p{
+                            font-size: 16px;
+                        }
+                        ul{
+                            li{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                
             }
-            p{
-                font-size: 16px;
+            .baton__container{
+                display: none;
             }
         }
     }
